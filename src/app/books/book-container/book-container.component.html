@@ -1,0 +1,25 @@
+<mat-card *ngIf="cardData">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ cardData.title }}</mat-card-title>
+    <mat-card-subtitle>{{ cardData.subtitle }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p><b>Authors: </b>{{ cardData.authors }}</p>
+    <p><b>Description: </b>{{ cardData.description }}</p>
+    <p><b>Language: </b>{{ cardData.language | uppercase }}</p>
+    <p><b>Page Count: </b>{{ cardData.pageCount }}</p>
+    <p>
+      <b>Published Date: </b>{{ cardData.publishedDate | date: "mediumDate" }}
+    </p>
+    <p>
+      <b>Link: </b>
+      <a href="{{ cardData.infoLink }}" target="_blank">{{
+        cardData.infoLink
+      }}</a>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a routerLink="/books"><button mat-button>BACK</button></a>
+  </mat-card-actions>
+</mat-card>

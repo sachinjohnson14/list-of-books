@@ -1,0 +1,30 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Authors</th>
+      <th scope="col">Language</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let data of redditList; let i = index">
+    <tr>
+      <th scope="row">{{ i + 1 }}</th>
+      <a (click)="navigate(i)" style="cursor: pointer"
+        ><td>{{ data.title }}</td></a
+      >
+      <td>{{ data.authors }}</td>
+      <td>{{ data.language }}</td>
+      <td>
+        <span style="display: inline-block; width: 80px"
+          ><a (click)="editRow(i)" style="cursor: pointer"
+            ><mat-icon>create</mat-icon></a
+          ><a (click)="deleteRow(i)" style="cursor: pointer"
+            ><mat-icon>delete_sweep</mat-icon></a
+          ></span
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
