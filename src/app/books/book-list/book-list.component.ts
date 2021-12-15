@@ -79,7 +79,7 @@ export class BookListComponent implements OnInit {
 
   navigate(i) {
     this.rService.rowData.next(this.redditList[i]);
-    this.router.navigate(["/books/details"]);
+    this.router.navigate(["books/details"]);
   }
 
   /**

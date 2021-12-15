@@ -11,7 +11,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { FormsModule } from "@angular/forms";
-import { MatInputModule } from "@angular/material";
+import { MatButtonModule, MatInputModule } from "@angular/material";
 import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
@@ -29,6 +29,7 @@ import { MatCardModule } from "@angular/material/card";
     MatInputModule,
     FormsModule,
     MatCardModule,
+    MatButtonModule
   ],
   entryComponents: [DialogOverviewExampleDialog],
 })

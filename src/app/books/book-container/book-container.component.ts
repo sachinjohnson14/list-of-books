@@ -16,7 +16,7 @@ export class BookContainerComponent implements OnInit {
       if (data) {
         this.cardData = data;
       } else {
-        this.router.navigate(["/books"]);
+        this.router.navigate(["books"]);
       }
     });
   }
